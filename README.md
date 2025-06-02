@@ -2,6 +2,8 @@
 
 **The Hidden Rack** is a modern fashion-focused web application designed to provide users with a seamless and stylish browsing experience. This repository currently includes the frontend of the application. Backend development is in progress and will be integrated soon.
 
+🔗 **Live Site:** [the-hidden-rack.vercel.app](https://the-hidden-rack.vercel.app)
+
 ## 🛠️ Technologies Used
 
 ### Frontend
