@@ -14,7 +14,7 @@ Follow the steps below to run the frontend locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/the-hidden-rack.git
+git clone https://github.com/anirudh-248/the-hidden-rack.git
 cd the-hidden-rack
 
 # Navigate to the frontend directory
