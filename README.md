@@ -1,12 +1,13 @@
 # The Hidden Rack
 
-**The Hidden Rack** is a modern fashion-focused web application designed to provide users with a seamless and stylish browsing experience. This repository currently includes the frontend of the application. Backend development is in progress and will be integrated soon.
+**The Hidden Rack** is a modern e-commerce platform dedicated to offering a curated selection of stylish, high-quality clothing for fashion-forward shoppers. With a clean, user-friendly interface and secure checkout, The Hidden Rack makes discovering and buying fashion an effortless and enjoyable experience.
 
 🔗 **Live Site:** [the-hidden-rack.vercel.app](https://the-hidden-rack.vercel.app)
 
 ## 🛠️ Technologies Used
 
 ### Frontend
+
 - React.js (with Vite)
 - Tailwind CSS
 
@@ -27,3 +28,4 @@ npm install
 
 # Start the development server
 npm run dev
+```

@@ -27,14 +27,14 @@ const Footer = () => {
           <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
           <ul className="flex flex-col gap-1 text-gray-600">
             <li>+91 1234567890</li>
-            <li>contact@thehiddenrack.fashion</li>
+            <li>contact@thehiddenrack.store</li>
           </ul>
         </div>
       </div>
       <div>
         <hr />
         <p className="py-5 text-sm text-center">
-          Copyright 2025 @ thehiddenrack.fashion - All Rights Reserved.
+          Copyright 2025 @ thehiddenrack.store - All Rights Reserved.
         </p>
       </div>
     </div>
