@@ -2,7 +2,7 @@
 
 **The Hidden Rack** is a modern e-commerce platform dedicated to offering a curated selection of stylish, high-quality clothing for fashion-forward shoppers. With a clean, user-friendly interface and secure checkout, The Hidden Rack makes discovering and buying fashion an effortless and enjoyable experience.
 
-🔗 **Live Site:** [the-hidden-rack.vercel.app](https://the-hidden-rack.vercel.app)
+🔗 **Live Site:** [thehiddenrack.store](https://thehiddenrack.store)
 
 ## 🛠️ Technologies Used
 
