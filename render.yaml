@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: the-hidden-rack-backend
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm run server
+    plan: free
