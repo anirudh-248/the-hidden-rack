@@ -29,6 +29,7 @@ const PlaceOrder = () => {
     country: "",
     phone: "",
   });
+
   const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -36,6 +37,38 @@ const PlaceOrder = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const initPay = (order) => {
+    const options = {
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+      amount: order.amount * 100,
+      currency: order.currency,
+      name: "Order Payment",
+      description: "Order Payment",
+      order_id: order.id,
+      receipt: order.receipt,
+      handler: async (response) => {
+        try {
+          const { data } = await axios.post(
+            backendUrl + "/api/order/verifyRazorpay",
+            response,
+            { headers: { token } }
+          );
+          if (data.success) {
+            navigate("/orders");
+            setCartItems({});
+          } else {
+            toast.error(data.message);
+          }
+        } catch (error) {
+          console.log(error);
+          toast.error(error.message);
+        }
+      },
+    };
+    const rzp = new window.Razorpay(options);
+    rzp.open();
   };
 
   const onSubmitHandler = async (e) => {
@@ -64,7 +97,6 @@ const PlaceOrder = () => {
       };
 
       switch (method) {
-        // API calls for COD
         case "cod": {
           const response = await axios.post(
             backendUrl + "/api/order/place",
@@ -89,6 +121,20 @@ const PlaceOrder = () => {
           if (response.data.success) {
             const { session_url } = response.data;
             window.location.replace(session_url);
+          } else {
+            toast.error(response.data.message);
+          }
+          break;
+        }
+
+        case "razorpay": {
+          const response = await axios.post(
+            backendUrl + "/api/order/razorpay",
+            orderData,
+            { headers: { token } }
+          );
+          if (response.data.success) {
+            initPay(response.data.order);
           } else {
             toast.error(response.data.message);
           }
