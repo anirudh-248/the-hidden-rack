@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
 import RelatedProducts from "../components/RelatedProducts";
+import ProductTabs from "../components/ProductTabs";
 
 const Product = () => {
   const { productId } = useParams();
@@ -22,8 +23,11 @@ const Product = () => {
   };
 
   useEffect(() => {
-    fetchProductData();
-  }, [productId]);
+    window.scrollTo(0, 0);
+    if (products.length > 0) {
+      fetchProductData();
+    }
+  }, [productId, products]);
 
   return productData ? (
     <div className="border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100">
@@ -93,27 +97,11 @@ const Product = () => {
           </div>
         </div>
       </div>
-      {/* Description and Review Section */}
+      {/* Description and Review Tabs */}
       <div className="mt-20">
-        <div className="flex">
-          <b className="border px-5 py-3 text-sm">Description</b>
-          <p className="border px-5 py-3 text-sm">Reviews (122)</p>
-        </div>
-        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum nihil
-            reprehenderit iste ducimus voluptatibus animi atque iusto, nobis
-            quis aperiam, tempora dolorem nemo sed obcaecati iure. Quae vel
-            assumenda laudantium?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            soluta mollitia sapiente eligendi nam repellat nihil a, totam
-            adipisci aliquam eum, animi reprehenderit ea optio ullam, harum
-            ducimus pariatur molestiae.
-          </p>
-        </div>
+        <ProductTabs productData={productData} />
       </div>
+
       {/* Displaying Related Products */}
       <RelatedProducts
         category={productData.category}

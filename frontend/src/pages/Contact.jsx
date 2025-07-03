@@ -18,7 +18,11 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-start gap-6">
           <p className="font-semibold text-xl text-gray-600">Our Store</p>
           <p className="text-gray-500">
-            123, MG Road Indiranagar <br /> Bengaluru, Karnataka 560038 India
+            123, Main Street
+            <br />
+            RR nagar, Bengaluru
+            <br />
+            Karnataka, India - 560098
           </p>
           <p className="text-gray-500">
             Tel: +91 1234567890 <br />
