@@ -24,7 +24,7 @@ Designed with user experience at its core, The Hidden Rack offers a seamless and
 ### 🔧 Backend
 
 - <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" width="24" style="vertical-align: middle;" /> **Node.js** – JavaScript runtime environment
-- <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" width="20" style="background-color: white; padding: 2px; border-radius: 4px; vertical-align: middle;" /> **Express.js** – RESTful API and server-side routing
+- <img src="https://img.icons8.com/?size=100&id=2ZOaTclOqD4q&format=png&color=000000" width="24" style="vertical-align: middle;" /> **Express.js** – RESTful API and server-side routing
 - <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width="24" style="vertical-align: middle;" /> **MongoDB Atlas** – Cloud-based NoSQL database for scalability
 
 ---
