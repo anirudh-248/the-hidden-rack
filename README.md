@@ -18,14 +18,14 @@ Designed with user experience at its core, The Hidden Rack offers a seamless and
 
 ### 🌐 Frontend
 
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="24" style="vertical-align: middle;" /> **React** (with JavaScript) – Built using Vite for blazing-fast dev experience
-- <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/tailwindcss.svg" width="24" style="vertical-align: middle;" /> **Tailwind CSS** – Utility-first styling for sleek, responsive design
+- <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" width="24" style="vertical-align: middle;" /> **React** (with JavaScript) – Built using Vite for blazing-fast dev experience
+- <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="24" style="vertical-align: middle;" /> **Tailwind CSS** – Utility-first styling for sleek, responsive design
 
 ### 🔧 Backend
 
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="24" style="vertical-align: middle;" /> **Node.js** – JavaScript runtime environment
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="24" style="vertical-align: middle;" /> **Express.js** – RESTful API and server-side routing
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="24" style="vertical-align: middle;" /> **MongoDB Atlas** – Cloud-based NoSQL database for scalability
+- <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" width="24" style="vertical-align: middle;" /> **Node.js** – JavaScript runtime environment
+- <img src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg" width="20" style="background-color: white; padding: 2px; border-radius: 4px; vertical-align: middle;" /> **Express.js** – RESTful API and server-side routing
+- <img src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg" width="24" style="vertical-align: middle;" /> **MongoDB Atlas** – Cloud-based NoSQL database for scalability
 
 ---
 
