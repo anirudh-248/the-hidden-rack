@@ -1,10 +1,13 @@
-import { React, useContext, useState } from "react";
+import { React, useContext, useState, useEffect, useRef } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const profileDropdownRef = useRef(null);
+
   const {
     setShowSearch,
     getCartCount,
@@ -13,12 +16,41 @@ const Navbar = () => {
     setToken,
     setCartItems,
   } = useContext(ShopContext);
+
   const logout = () => {
     navigate("/login");
     localStorage.removeItem("token");
     setToken("");
     setCartItems({});
+    setDropdownVisible(false);
   };
+
+  const handleProfileClick = () => {
+    if (token) {
+      setDropdownVisible(!dropdownVisible);
+    } else {
+      navigate("/login");
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownVisible &&
+        profileDropdownRef.current &&
+        !profileDropdownRef.current.contains(event.target)
+      ) {
+        setDropdownVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownVisible]);
+
   return (
     <div className="flex items-center justify-between py-5 font-medium mt-2 mb-2">
       <Link to={"/"}>
@@ -50,25 +82,34 @@ const Navbar = () => {
           className="w-5 cursor-pointer"
           alt=""
         />
-        <div className="group relative">
+        <div className="relative" ref={profileDropdownRef}>
           <img
-            onClick={() => (token ? null : navigate("/login"))}
+            onClick={handleProfileClick}
             src={assets.profile_icon}
             className="w-5 cursor-pointer"
             alt=""
           />
-          {/* Dropdown menu */}
           {token && (
-            <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
+            <div
+              className={`absolute dropdown-menu right-0 pt-4 ${
+                dropdownVisible ? "block" : "hidden"
+              } sm:group-hover:block`}
+            >
               <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
                 <p
-                  onClick={() => navigate("/profile")}
+                  onClick={() => {
+                    navigate("/profile");
+                    setDropdownVisible(false);
+                  }}
                   className="cursor-pointer hover:text-black"
                 >
                   My Profile
                 </p>
                 <p
-                  onClick={() => navigate("/orders")}
+                  onClick={() => {
+                    navigate("/orders");
+                    setDropdownVisible(false);
+                  }}
                   className="cursor-pointer hover:text-black"
                 >
                   Orders
@@ -93,7 +134,6 @@ const Navbar = () => {
           alt=""
         />
       </div>
-      {/* Sidebar menu for small screens*/}
       <div
         className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${
           visible ? "w-full" : "w-0"
