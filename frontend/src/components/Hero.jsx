@@ -10,8 +10,8 @@ const Hero = () => {
           <span className="relative inline-flex h-4 w-4 rounded-full bg-red-500"></span>
         </span>
         <p className="text-2xl font-semibold text-gray-800">
-          The website has been suspended. Please contact the owner for more
-          support.
+          The website is paused for now. Please reach out to the creator for
+          more info.
         </p>
       </div>
       {/* Hero Left Side */}
