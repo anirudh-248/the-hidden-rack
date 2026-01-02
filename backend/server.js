@@ -29,8 +29,8 @@ app.get("/", (req, res) => {
 });
 
 // Start the server
-const server = app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+const server = app.listen(PORT, "127.0.0.1", () => {
+  console.log(`Server is running on http://127.0.0.1:${PORT}`);
 });
 
 server.setTimeout(30000); // Set timeout to 30 seconds
