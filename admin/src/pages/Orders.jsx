@@ -16,7 +16,7 @@ const Orders = ({ token }) => {
       const response = await axios.post(
         backendUrl + "/api/order/list",
         {},
-        { headers: { token } }
+        { headers: { token } },
       );
       if (response.data.success) {
         setOrders(response.data.orders.reverse());
@@ -37,7 +37,7 @@ const Orders = ({ token }) => {
           orderId,
           status: event.target.value,
         },
-        { headers: { token } }
+        { headers: { token } },
       );
       if (response.data.success) {
         await fetchAllOrders();
@@ -67,7 +67,7 @@ const Orders = ({ token }) => {
             <div>
               <div>
                 {order.items.map((item, index) => {
-                  if (index === order.items.length) {
+                  if (index === order.items.length - 1) {
                     return (
                       <p className="py-0.5" key={index}>
                         {item.name} x {item.quantity} <span>{item.size}</span>

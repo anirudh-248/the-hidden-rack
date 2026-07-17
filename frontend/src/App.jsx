@@ -9,6 +9,7 @@ import Cart from "./pages/Cart.jsx";
 import Login from "./pages/Login.jsx";
 import PlaceOrder from "./pages/PlaceOrder.jsx";
 import Orders from "./pages/Orders.jsx";
+import Profile from "./pages/Profile.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Searchbar from "./components/Searchbar.jsx";
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/place-order" element={<PlaceOrder />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/verify" element={<Verify />} />
-        <Route path="/profile" element={<div>My Profile</div>} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/privacy-policy" element={<div>Privacy Policy</div>} />
         <Route
           path="/terms-and-conditions"

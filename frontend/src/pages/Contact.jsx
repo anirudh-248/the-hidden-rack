@@ -26,7 +26,7 @@ const Contact = () => {
           </p>
           <p className="text-gray-500">
             Tel: +91 1234567890 <br />
-            Email: contact@thehiddenrack.store
+            Email: contact@thehiddenrack.shop
           </p>
           <p className="font-semibold text-xl text-gray-600">
             Careers at The Hidden Rack

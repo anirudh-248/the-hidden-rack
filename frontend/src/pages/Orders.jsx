@@ -19,7 +19,7 @@ const Orders = () => {
       const response = await axios.post(
         backendUrl + "/api/order/user-orders",
         {},
-        { headers: { token } }
+        { headers: { token } },
       );
 
       if (response.data.success) {
@@ -46,11 +46,11 @@ const Orders = () => {
   }, [token]);
 
   return (
-    <div className="border-t pt-16">
-      <div className="text-2xl">
+    <div className="border-t pt-10">
+      <div className="text-2xl text-center">
         <Title text1={"MY"} text2={"ORDERS"} />
       </div>
-      <div>
+      <div className="mt-8">
         {orderData.map((item, index) => (
           <div
             key={index}
